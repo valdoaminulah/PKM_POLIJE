@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 06, 2026 at 07:15 AM
+-- Generation Time: May 13, 2026 at 02:18 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -72,7 +72,16 @@ CREATE TABLE `data_dosen` (
 --
 
 INSERT INTO `data_dosen` (`id_dosen`, `foto_dosen`, `nama_lengkap`, `nip`, `jurusan`, `no_whatsapp`, `email`, `linkedin_name`, `instagram_username`, `facebook_name`, `riwayat_bimbingan`, `created_at`, `updated_at`) VALUES
-(2, 'dosen_1234567800_1777618662.jpg', 'Tintang Tirta.MT.PSHT.PN', '1234567800', 'Teknologi Informasi', '098765432112', 'valdoaminullah903@gmail.com', 'Lintang', '@lintang11', 'lintang', 101, '2026-05-01 06:57:42', '2026-05-01 17:30:48');
+(9, 'dosen_197104082001121003_1778373444.png', 'Ir. Wahyu Kurnia Dewanto, S.Kom, MT', '197104082001121003', 'Teknologi Informasi', '-', 'wahyu.k.dewanto@gmail.com', '-', '-', '-', 0, '2026-05-10 00:37:24', '2026-05-10 00:37:24'),
+(10, 'dosen_198302032006041003_1778373558.jpg', 'Ir. Hendra Yufit Riskiawan, S.Kom, M.Cs', '198302032006041003', 'Teknologi Informasi', '-', 'yufit@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:39:18', '2026-05-10 00:39:18'),
+(11, 'dosen_197808162005011002_1778373708.jpg', 'Beni Widiawan, S.ST, MT', '197808162005011002', 'Teknologi Informasi', '-', 'beni@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:41:48', '2026-05-10 00:41:48'),
+(12, 'dosen_198511282008121002_1778373817.jpg', 'Aji Seto Arifianto, S.ST., M.T.', '198511282008121002', 'Teknologi Informasi', '-', 'ajiseto@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:43:37', '2026-05-10 00:43:37'),
+(13, 'dosen_199305102024062001_1778374007.jpg', 'Lukie Perdanasari, S.Kom., M.T.', '199305102024062001', 'Teknologi Informasi', '-', 'lukieperdanasari@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:46:47', '2026-05-10 00:46:47'),
+(14, 'dosen_198012122005011001_1778374136.jpeg', 'Prawidya Destarianto, S.Kom, M.T', '198012122005011001', 'Teknologi Informasi', '-', 'prawidya@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:48:56', '2026-05-10 00:48:56'),
+(15, 'dosen_199002272018032001_1778374309.png', 'Trismayanti Dwi P, S.Kom, M.Cs', '199002272018032001', 'Teknologi Informasi', '-', 'trismayanti@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:51:49', '2026-05-10 00:51:49'),
+(16, 'dosen_199305082022032013_1778374396.png', 'Dia Bitari Mei Yuana, S.ST., M.Tr.Kom.', '199305082022032013', 'Teknologi Informasi', '-', 'dia.bitari@polije.ac.id', '-', '-', '-', 0, '2026-05-10 00:53:16', '2026-05-10 00:53:16'),
+(17, 'dosen_197806142024211000_1778635651.png', 'Aditya Wahyu Pratama, S.T., M.T.', '197806142024211000', 'Teknik', '-', 'aditya_wa@polije', '-', '-', '-', 0, '2026-05-13 01:27:31', '2026-05-13 01:27:31'),
+(18, 'dosen_198009272008011008_1778638694.png', 'Arif Wahyudiono, S.T., M.T.', '198009272008011008', 'Teknik', '-', 'arif_wahyudiono@polije.ac.id', '-', '-', '-', 0, '2026-05-13 02:18:14', '2026-05-13 02:18:14');
 
 -- --------------------------------------------------------
 
@@ -95,7 +104,7 @@ CREATE TABLE `data_kontak_center` (
 --
 
 INSERT INTO `data_kontak_center` (`id_kontak`, `nama_admin`, `jurusan`, `whatsapp`, `lokasi`, `foto_admin`, `tgl_dibuat`) VALUES
-(5, 'Lukie Perdanasari, S.Kom., M.T.', 'Teknologi Informasi', '087757636646', 'Gedung J, Lantai 1', '1777855454_TI.jpg', '2026-05-04 00:44:14');
+(5, 'Lukie Perdanasari, S.Kom., M.T.', 'Teknik Informatika', '087757636646', 'Gedung JTI, Lantai 1', '1777855454_TI.jpg', '2026-05-04 00:44:14');
 
 -- --------------------------------------------------------
 
@@ -150,9 +159,11 @@ CREATE TABLE `data_tim_pkm` (
 --
 
 INSERT INTO `data_tim_pkm` (`id_tim`, `id_ketua`, `nama_tim`, `kategori_pkm`, `deskripsi_projek`, `status_tim`, `created_at`) VALUES
-(18, 17, 'Spontan V1', 'PKM-KC', 'Membuat aplikasi monitoring bawang bermasih IoT', 'Mencari Anggota', '2026-05-05 17:53:23'),
+(18, 17, 'Spontan Juara', 'PKM-KC', 'Membuat aplikasi monitoring bawang bermasih IoT', 'Mencari Anggota', '2026-05-05 17:53:23'),
 (20, 24, 'Spontan Full', 'PKM-KC', 'Membuat aplikasi etol berbasis boking', 'Mencari Anggota', '2026-05-06 03:14:11'),
-(22, 23, 'Prime Spontan', 'PKM-KC', 'Membuat aplikasi mendeteksi satelit nasa', 'Mencari Anggota', '2026-05-06 03:29:56');
+(22, 23, 'Prime Spontan', 'PKM-KC', 'Membuat aplikasi mendeteksi satelit nasa', 'Mencari Anggota', '2026-05-06 03:29:56'),
+(24, 20, 'Laba Laba 12', 'PKM-KC', 'Membuat satelit', 'Mencari Anggota', '2026-05-06 08:36:45'),
+(25, 32, 'Sukowono maju', 'PKM-KC', 'pembuatan panel surya', 'Mencari Anggota', '2026-05-09 07:07:01');
 
 -- --------------------------------------------------------
 
@@ -203,7 +214,10 @@ INSERT INTO `pendaftaran_tim` (`id_pendaftaran`, `id_tim`, `id_mahasiswa`, `pesa
 (49, 18, 28, NULL, 'Diterima', '2026-05-06 03:01:41', '2026-05-06 03:07:59'),
 (50, 18, 27, NULL, 'Diterima', '2026-05-06 03:09:23', '2026-05-06 03:09:30'),
 (51, 18, 26, NULL, 'Diterima', '2026-05-06 03:10:03', '2026-05-06 03:10:08'),
-(52, 18, 25, NULL, 'Diterima', '2026-05-06 03:10:49', '2026-05-06 03:10:54');
+(52, 18, 25, NULL, 'Diterima', '2026-05-06 03:10:49', '2026-05-06 03:10:54'),
+(53, 22, 22, NULL, 'Pending', '2026-05-06 08:25:20', '2026-05-06 08:25:20'),
+(55, 25, 33, NULL, 'Diterima', '2026-05-09 07:37:50', '2026-05-09 08:34:07'),
+(56, 22, 17, NULL, 'Pending', '2026-05-09 08:32:09', '2026-05-09 08:32:09');
 
 -- --------------------------------------------------------
 
@@ -264,7 +278,11 @@ INSERT INTO `user_mahasiswa` (`id`, `nama_lengkap`, `nim`, `email_polije`, `no_w
 (26, 'Hendra Wijaya', 'E4121008', 'e4121008@student.polije.ac.id', '081234567808', 'L', 'TI', 'Teknik Informatika', 2023, '$2y$10$G0KpPiuVEXTprVaVwWr7YuFI7rS054eUOGixaVaz6um6MRHbXvZ52', 'E4121008_1778031962.png', '2026-05-06 01:46:02'),
 (27, 'Intan Sari', 'E4121009', 'e4121009@student.polije.ac.id', '081234567809', 'P', 'BKP', 'Pariwisata', 2023, '$2y$10$0M68VljNqJRGtXl88jmOx.Y//dsEU7FidDN0rYn4HCZxWEgtFaWJC', 'E4121009_1778032102.png', '2026-05-06 01:48:22'),
 (28, 'Joko Susilo', 'E4121010', 'e4121010@student.polije.ac.id', '081234567810', 'L', 'TI', 'Teknik Informatika', 2022, '$2y$10$tyVgUGVCMrPIj1zimtktrOin8tpka3bqfaQPALqJtlk2IaJKzcj12', 'KHS_E4121010_1778036631.png', '2026-05-06 01:49:52'),
-(29, 'Maulana Izzulhaq Imron', 'E41250579', 'maulanaizzulhaq.dax21@gmail.com', '083851537009', 'L', 'TI', 'Teknik Informatika', 2025, '$2y$10$gQD0s6enQPo0ItZbCEaJIe3uk1vZJfagbXHNhW2Q/5E2Mrxw2mcu2', 'E41250579_1778042602.jpg', '2026-05-06 04:43:22');
+(29, 'Maulana Izzulhaq Imron', 'E41250579', 'maulanaizzulhaq.dax21@gmail.com', '083851537009', 'L', 'TI', 'Teknik Informatika', 2025, '$2y$10$gQD0s6enQPo0ItZbCEaJIe3uk1vZJfagbXHNhW2Q/5E2Mrxw2mcu2', 'E41250579_1778042602.jpg', '2026-05-06 04:43:22'),
+(30, 'Agnes Riskiya ismi', 'E41250685', 'e41250685@student.polije.ac.id', '089685438', 'P', 'TI', 'Teknik Informatika', 2025, '$2y$10$fbfUeTRfHFOiJ2w.93lKQObpeEb1BemKEm9NtbE4L1Of8jPMYv6O.', 'E41250685_1778308173.png', '2026-05-09 06:29:33'),
+(32, 'Sugi Hartanto ', 'E4125023', 'e4125023@polije.ac.id', '081155337788', 'L', 'TEKNIK', 'Teknik Elektro', 2025, '$2y$10$PGWmYj0Lzq.EJdwnIRsmbuvi.SbKUgo8saP3cUaONPEYLmmb9DkvO', 'E4125023_1778310289.jpg', '2026-05-09 07:04:49'),
+(33, 'Rena Hartono', 'e4125654', 'e4125654@polije.ac.id', '081299995555', 'L', 'TI', 'Teknik Informatika', 2025, '$2y$10$B2UuXjWl6xeF2IT4QDnDXe3KYRoaFo5wPQhdIvVia/YMNBzsBQsUS', 'e4125654_1778311280.jpg', '2026-05-09 07:21:20'),
+(34, 'Niken Putri Lestari', 'E41250812', 'e41250812@student.polije.ac.id', '0812352922111', 'P', 'TI', 'Teknik Informatika', 2025, '$2y$10$NsXFDhtELFqkncEjjDLnlOheLn5OiUPSvW.ZykflZtEOBMXdEeVCW', 'E41250812_1778590352.jpg', '2026-05-12 12:52:33');
 
 -- --------------------------------------------------------
 
@@ -368,13 +386,13 @@ ALTER TABLE `user_pengelola`
 -- AUTO_INCREMENT for table `data_berita`
 --
 ALTER TABLE `data_berita`
-  MODIFY `id_berita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_berita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `data_dosen`
 --
 ALTER TABLE `data_dosen`
-  MODIFY `id_dosen` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_dosen` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `data_kontak_center`
@@ -392,7 +410,7 @@ ALTER TABLE `data_pkm`
 -- AUTO_INCREMENT for table `data_tim_pkm`
 --
 ALTER TABLE `data_tim_pkm`
-  MODIFY `id_tim` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_tim` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `jadwal_pkm`
@@ -404,7 +422,7 @@ ALTER TABLE `jadwal_pkm`
 -- AUTO_INCREMENT for table `pendaftaran_tim`
 --
 ALTER TABLE `pendaftaran_tim`
-  MODIFY `id_pendaftaran` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id_pendaftaran` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `pesan`
@@ -416,7 +434,7 @@ ALTER TABLE `pesan`
 -- AUTO_INCREMENT for table `user_mahasiswa`
 --
 ALTER TABLE `user_mahasiswa`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `user_pengelola`
