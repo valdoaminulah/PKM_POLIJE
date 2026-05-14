@@ -105,8 +105,8 @@ function tgl_indo($timestamp) {
                                     <i class="fas fa-bullhorn"></i>
                                 </div>
                                 <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1.5">Diterbitkan Oleh:</p>
-                                    <p class="text-sm font-black text-slate-800 uppercase">Admin PKM Center Polije</p>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1.5">Diterbitkan Untuk:</p>
+                                    <p class="text-sm font-black text-slate-800 uppercase"><?=($pesan['tujuan_pesan'])?></p>
                                 </div>
                             </div>
 

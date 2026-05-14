@@ -18,7 +18,7 @@ $query_str = "SELECT p.*, t.nama_tim, t.kategori_pkm, t.deskripsi_projek, u.nama
               WHERE p.id_mahasiswa = :id_user
               AND (
                   p.status_pendaftaran != 'Ditolak' 
-                  OR (p.status_pendaftaran = 'Ditolak' AND p.created_at >= NOW() - INTERVAL 30 SECOND)
+                  OR (p.status_pendaftaran = 'Ditolak' AND p.created_at >= NOW() - INTERVAL 60 SECOND)
               )
               ORDER BY p.created_at DESC";
 
