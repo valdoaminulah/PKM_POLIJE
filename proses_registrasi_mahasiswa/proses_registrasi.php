@@ -17,6 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $angkatan = $_POST['angkatan'] ?? '';
     $password = $_POST['password'] ?? '';
 
+    // =========================================================================
+    // TAMBAHAN VALIDASI EMAIL WAJIB @student.polije.ac.id
+    // =========================================================================
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !str_ends_with(strtolower($email), '@student.polije.ac.id')) {
+        echo "<script>
+            alert('Registrasi Gagal! Anda wajib menggunakan email institusi resmi (@student.polije.ac.id).'); 
+            window.history.back();
+        </script>";
+        exit;
+    }
+    // =========================================================================
+
     // 2. Logika Upload Gambar KHS
     $nama_file_khs = null;
     

@@ -22,7 +22,7 @@ if ($id) {
 
         // 4. Feedback Berhasil
         echo "<script>
-                window.location.href = '../loading/loading_hapus_brodcast.php';
+                window.location.href = '../loading/loading_hapus_broadcast.php';
               </script>";
 
     } catch (PDOException $e) {

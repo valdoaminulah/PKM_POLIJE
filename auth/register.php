@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- Logo Broser -->
+    <!-- Logo Browser -->
     <link rel="icon" type="image/png" href="../image/LogoPolije.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,8 +63,8 @@
             <p class="text-slate-500 text-sm font-medium mt-1">Lengkapi data diri Anda untuk akun PKM</p>
         </div>
 
-        <!-- Tambahkan enctype="multipart/form-data" untuk upload file -->
-        <form action="../proses_registrasi_mahasiswa/proses_registrasi.php" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <!-- Ditambahkan id="formRegistrasi" untuk handle validasi js -->
+        <form id="formRegistrasi" action="../proses_registrasi_mahasiswa/proses_registrasi.php" method="POST" enctype="multipart/form-data" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
                 
                 <div class="group">
@@ -151,7 +151,6 @@
                            placeholder="••••••••">
                 </div>
 
-                <!-- INPUT BARU: UPLOAD KHS -->
                 <div class="group">
                     <label class="block text-[11px] font-bold text-blue-900 uppercase tracking-widest mb-1.5 ml-1">Upload KHS (Gambar)</label>
                     <input type="file" name="khs_image" accept="image/*" required 
@@ -172,5 +171,62 @@
             </p>
         </div>
     </div>
+
+    <!-- ========================================================================= -->
+    <!-- STRUKTUR MODAL POP-UP KUSTOM (HIDDEN SECARA DEFAULT) -->
+    <!-- ========================================================================= -->
+    <div id="errorModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-[2.5rem] p-8 max-w-sm w-full mx-4 text-center shadow-2xl transform scale-95 transition-all duration-300">
+            <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Email Tidak Valid</h3>
+            <p class="text-sm text-slate-500 mb-6">Pendaftaran gagal. Anda diwajibkan menggunakan email institusi resmi <span class="font-bold text-blue-950">@student.polije.ac.id</span></p>
+            <button onclick="tutupModal()" class="w-full bg-blue-900 hover:bg-black text-white font-bold py-3.5 rounded-xl transition-all duration-200 uppercase tracking-wider text-xs">
+                Mengerti
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- LOGIKA JAVASCRIPT UNTUK MENGONTROL MODAL -->
+    <!-- ========================================================================= -->
+    <script>
+        const form = document.getElementById('formRegistrasi');
+        const modal = document.getElementById('errorModal');
+
+        form.addEventListener('submit', function(event) {
+            // Mengambil value input email dan mengubah ke lowercase untuk menghindari bypass huruf kapital
+            const emailValue = document.getElementsByName('email')[0].value.trim().toLowerCase();
+            
+            // Cek apakah email berakhiran dengan @student.polije.ac.id
+            if (!emailValue.endsWith('@student.polije.ac.id')) {
+                event.preventDefault(); // Menghentikan form agar tidak melakukan submit ke PHP
+                
+                // Animasi memunculkan modal kustom
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('div').classList.remove('scale-95');
+                    modal.classList.add('opacity-100');
+                    modal.querySelector('div').classList.add('scale-100');
+                }, 10);
+            }
+        });
+
+        function tutupModal() {
+            // Animasi menyembunyikan modal kustom kembali
+            modal.classList.remove('opacity-100');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+
 </body>
 </html>
