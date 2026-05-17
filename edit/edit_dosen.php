@@ -103,6 +103,14 @@ try {
                         <option value="Teknik Informatika" <?= $dosen['jurusan'] == 'Teknik Informatika' ? 'selected' : '' ?>>Teknik Informatika</option>
                         <option value="Teknologi Informasi" <?= $dosen['jurusan'] == 'Teknologi Informasi' ? 'selected' : '' ?>>Teknologi Informasi</option>
                         <option value="Manajemen Informatika" <?= $dosen['jurusan'] == 'Manajemen Informatika' ? 'selected' : '' ?>>Manajemen Informatika</option>
+                        <option value="Produksi Pertanian" <?= $dosen['jurusan'] == 'Produksi Pertanian' ? 'selected' : '' ?>>Produksi Pertanian</option>
+                        <option value="Teknologi Pertanian" <?= $dosen['jurusan'] == 'Teknologi Pertanian' ? 'selected' : '' ?>>Teknologi Pertanian</option>
+                        <option value="Peternakan" <?= $dosen['jurusan'] == 'Peternakan' ? 'selected' : '' ?>>Peternakan</option>
+                        <option value="Manajemen Agribisnis" <?= $dosen['jurusan'] == 'Manajemen Agribisnis' ? 'selected' : '' ?>>Manajemen Agribisnis</option>
+                        <option value="Bahasa, Komunikasi dan Pariwisata" <?= $dosen['jurusan'] == 'Bahasa, Komunikasi dan Pariwisata' ? 'selected' : '' ?>>Bahasa, Komunikasi dan Pariwisata</option>
+                        <option value="Kesehatan" <?= $dosen['jurusan'] == 'Kesehatan' ? 'selected' : '' ?>>Kesehatan</option>
+                        <option value="Teknik" <?= $dosen['jurusan'] == 'Teknik' ? 'selected' : '' ?>>Teknik</option>
+                        <option value="Bisnis" <?= $dosen['jurusan'] == 'Bisnis' ? 'selected' : '' ?>>Bisnis</option>
                     </select>
                 </div>
 
